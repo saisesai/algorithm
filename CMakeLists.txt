@@ -5,4 +5,4 @@ project(codeforce)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(app src/547b.cc)
+add_executable(app src/1343b.cc)

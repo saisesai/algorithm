@@ -28,3 +28,17 @@ T babylonian_sqrt(T n) {
     return x;
 }
 ```
+
+## Monotonic Stack
+
+```c++
+for (int pick = 0; pick < n; pick++) {
+    while (!mono_stack.empty() && a[pick] < mono_stack.top().second) {
+        res[mono_stack.top().first] = pick - mono_stack.top().first;
+        mono_stack.pop();
+    }
+    mono_stack.emplace(pick, a[pick]);
+}
+```
+
+eg: 547b
