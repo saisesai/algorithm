@@ -29,19 +29,15 @@ int main() {
             }
         }
     }
-//    show_vec_2d(table);
+    //show_vec_2d(table);
 
     int pairs(0), j(0);
-    for (size_t i = 0; i < m; i++) {
-        if (j < n && find(table[i].begin() + j, table[i].end(), 1) == table[i].end()) continue;
-        while (j < n) {
-            if (table[i][j] == 1) {
-                pairs += 1;
-                j++;
-                break;
-            }
-            j++;
-        }
+    for (int i = 0; i < m; i++) {
+        if (j >= n) break;
+        if (find(table[i].begin() + j, table[i].end(), 1) == table[i].end()) continue;
+        while(table[i][j] != 1) j++;
+        pairs += 1;
+        j++;
     }
 
     cout << pairs << endl;
