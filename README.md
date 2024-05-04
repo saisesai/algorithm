@@ -29,6 +29,17 @@ T babylonian_sqrt(T n) {
 }
 ```
 
+## Integer Sum
+
+```c++
+template<typename T>
+T vec_sum(const vector<T>& vec) {
+    T res = 0;
+    for(const T& e: vec) res += e;
+    return res;
+}
+```
+
 ## Monotonic Stack
 
 ```c++
