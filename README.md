@@ -42,6 +42,10 @@ T vec_sum(const vector<T>& vec) {
 
 ## Monotonic Stack
 
+It is used to maintain elements in a stack in either non-increasing or non-decreasing order. 
+Monotonic stack helps in solving problems where we need to find the **next greater element**, **next smaller element**, or maintain a certain order of elements.
+The stack is updated in a way that preserves the desired monotonic property.
+
 ```c++
 for (int pick = 0; pick < n; pick++) {
     while (!mono_stack.empty() && a[pick] < mono_stack.top().second) {
@@ -53,3 +57,39 @@ for (int pick = 0; pick < n; pick++) {
 ```
 
 eg: 547b
+
+## Difference Array / Prefix Sum Array
+
+It reduces time complexity by updating only at the left and right endpoints of intervals.
+After updating, the final result is obtained by accumulating the values in the array.
+This optimization is effective for interval update problems with **large intervals**.
+It helps improve efficiency by avoiding unnecessary loop operations.
+
+```c++
+vector<int> ht(200001, 0);
+for (int i = 0; i < n; i++) {
+    int l, r;
+    cin >> l >> r;
+    for (int j = l; j <= r; j++) {
+        ht[j]++;
+    }
+}
+```
+
+Above can be optimized to below:
+
+```c++
+vector<int> ht(200001, 0);
+for (int i = 0; i < n; i++) {
+    int l, r;
+    cin >> l >> r;
+    ht[l]++;
+    ht[r + 1]--;
+}
+
+for (int i = 1; i < 200001; i++) {
+    ht[i] += ht[i - 1];
+}
+```
+
+eg: 816b
