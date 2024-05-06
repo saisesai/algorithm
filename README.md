@@ -1,6 +1,6 @@
 # codeforces
 
-## integer range
+## Integer Range
 
 - i8 : -128 to 127
 - u8 : 0 to 255
