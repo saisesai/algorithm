@@ -18,7 +18,7 @@
 
 ```c++
 template<typename T>
-T babylonian_sqrt(T n) {
+T bsqrt(T n) {
     T x = n;
     T y = 1;
     while (x > y) {
