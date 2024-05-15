@@ -40,7 +40,7 @@ T vec_sum(const vector<T>& vec) {
 }
 ```
 
-## Monotonic Stack
+## Monotonic stack
 
 It is used to maintain elements in a stack in either non-increasing or non-decreasing order. 
 Monotonic stack helps in solving problems where we need to find the **next greater element**, **next smaller element**, or maintain a certain order of elements.

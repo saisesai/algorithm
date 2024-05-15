@@ -1,3 +1,5 @@
+// Author Sai (saisesai@qq.com)
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -22,7 +24,14 @@ int main() {
     cin >> t;
 
     while (t--) {
+        int n;
+        cin >> n;
 
+        string ns = to_string(n);
+        std::fill(ns.begin(), ns.end(), ns[0]);
+        int a = ns[0] - '0';
+        int x = stoi(ns);
+        cout << 9 * (ns.length() - 1) + (n < x ? a - 1 : a) << endl;
     }
 
     return 0;
