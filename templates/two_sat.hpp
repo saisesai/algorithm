@@ -61,7 +61,7 @@ public:
             }
         }
         bool res = true;
-        for (int i = 1; i <= n; ++i) {
+        for (int i = 1; i <= n; i++) {
             if (scc[n - i] == scc[n + i]) {
                 res = false;
             }
