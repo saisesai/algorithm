@@ -19,13 +19,13 @@
 ```c++
 template<typename T>
 T bsqrt(T n) {
-    T x = n;
-    T y = 1;
-    while (x > y) {
-        x = (x + y) / 2;
-        y = n / x;
+    T row = n;
+    T col = 1;
+    while (row > col) {
+        row = (row + col) / 2;
+        col = n / row;
     }
-    return x;
+    return row;
 }
 ```
 
