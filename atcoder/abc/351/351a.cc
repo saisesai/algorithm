@@ -17,17 +17,25 @@ using namespace std;
 #define hmap unordered_map
 
 #define PI 3.14159265358979323846
-#define eps 1e-9
 
 #define fast_io() do{ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);}while(0)
-
 
 int main() {
     fast_io();
 
-    int n, m;
-    cin >> n >> m;
+    int a[9];
+    int b[8];
+    for (int &ai: a) {
+        cin >> ai;
+    }
+    for (int &bi: b) {
+        cin >> bi;
+    }
 
+    int a_sum = accumulate(a, a + 9, 0);
+    int b_sum = accumulate(b, b + 8, 0);
+
+    cout << a_sum - b_sum + 1 << endl;
 
     return 0;
 }
